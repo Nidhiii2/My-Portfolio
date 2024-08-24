@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nidhi Saroj - Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Nidhi Saroj</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#exp">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="about-section">
+        <div class="about-details">
+          <h2>About Me</h2>
+          <section id="intro">
+            <div class="typing-effect-container">
+              <span id="typed-text"></span><span class="cursor"></span>
+            </div>
+          </section>          
+        </div>
+        <div class="about-photo">
+          <img src="https://static.vecteezy.com/system/resources/previews/002/145/625/non_2x/home-office-concept-woman-working-or-studying-from-home-vector.jpg"
+            alt="Nidhi Saroj">
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="projects-section">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project">
+            <h3>Movie Recommender System</h3>
+            <p>A 14-day project using Python, it suggests movies based on user preferences with machine learning algorithms. <a href="link_to_movie_recommender_system">Check out the project.</a></p>
+          </div>
+          <div class="project">
+            <h3>Mood Detector</h3>
+            <p>A 20-day Python project utilizing NLP techniques, TextBlob, and NLTK for sentiment analysis on call transcripts. <a href="link_to_mood_detector">Check out the project.</a></p>
+          </div>
+          <div class="project">
+            <h3>Basic Chatbot</h3>
+            <p>A 7-day Tkinter project for an automated conversation system, enhancing customer support with a GUI chatbot. <a href="link_to_basic_chatbot">Check out the project.</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="exp">
+      <div class="experience-section">
+        <h2>Experience</h2>
+        <div class="exp">
+          <p><strong>Machine Learning Internship</strong> - CodSoft | July 2024 <br> Gained proficiency in Python, TensorFlow, and scikit-learn. Worked on data preprocessing, feature engineering, and model evaluation.</p>
+          <p><strong>Web Development and Designing Internship</strong> - Oasis Infobyte | June 2024 <br> Developed and designed websites using HTML, CSS, and JavaScript. Focused on UX/UI, responsive design, and modern web technologies.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-section">
+        <div class="contact-heading">
+          <h2>Contact</h2>
+        </div>
+        <div class="contact-form">
+        <form action="submit_form.php" method="post">
+          <table>
+            <tr>
+              <td><label for="name">Name</label></td>
+              <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+              <td><label for="email">Email</label></td>
+              <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+              <td><label for="message">Message</label></td>
+              <td><textarea id="message" name="message" required></textarea></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><button type="submit">Send</button></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+        <a href="https://github.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" alt="GitHub"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="https://img.freepik.com/free-vector/instagram-background-gradient-colors_23-2147823814.jpg" alt="Instagram"></a>
+      </div>
+      <p>&copy; 2024 Nidhi Saroj. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+const textToType = "Hi, I'm Nidhi a developer who loves creating cool stuff with code.";
+const typingSpeed = 100; // Adjust typing speed in milliseconds
+let i = 0;
+
+function typeWriter() {
+  if (i < textToType.length) {
+    const currentChar = textToType.charAt(i);
+    const typedTextElement = document.getElementById("typed-text");
+
+    if (currentChar === '\n') {
+      typedTextElement.innerHTML += '<br>';
+    } else {
+      typedTextElement.innerHTML += currentChar;
+    }
+
+    i++;
+    setTimeout(typeWriter, typingSpeed);
+  }
+}
+
+window.onload = typeWriter;
+// Create floating particles
+const particleContainer = document.createElement('div');
+particleContainer.id = 'particle-container';
+document.body.appendChild(particleContainer);
+
+for (let i = 0; i < 50; i++) {
+  const particle = document.createElement('div');
+  particle.classList.add('particle');
+  particle.style.width = `${Math.random() * 10}px`;
+  particle.style.height = `${Math.random() * 10}px`;
+  particle.style.top = `${Math.random() * 100}vh`;
+  particle.style.left = `${Math.random() * 100}vw`;
+  particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+  particleContainer.appendChild(particle);
+}
+  </script>
+</body>
+
+</html>

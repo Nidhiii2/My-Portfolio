@@ -159,7 +159,6 @@ main {
   width: 100%;
   padding: 20px;
   border-radius: 8px;
-  min-height: 80vh;
   margin-bottom: 40px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }

@@ -176,7 +176,6 @@ main {
 .cursor {
   display: inline-block;
   width: 10px;
- 
   animation: blink 0.7s infinite;
 }
 
